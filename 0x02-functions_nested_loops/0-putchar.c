@@ -4,22 +4,21 @@
 /**
  *main - entry point
  *
- *Desceiption: Prints Main with _putchar
+ *Description: Prints Main with _putchar
  *
- *Return: always 0
+ *Return: Always 0 (success)
  */
 
 int main(void)
 {
-int i = 0;
-char c;
-char s[] = "Main\n";
+char name[10] = "_putchar";
 
-while (i <= 9)
+int i;
+
+for (i = 0; i < 8; i++)
 {
-c = s[i];
-_putchar(c);
-i++;
+_putchar(name[i]);
 }
+_putchar(10);
 return (0);
 }
