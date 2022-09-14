@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,7 +5,7 @@
  *
  * Description: Print _putchar
  *
- * Return: Always 0
+ * Return: Always 0 (succes)
  */
 
 int main(void)
@@ -20,5 +19,6 @@ for (i = 0; i < 8; i++)
 _putchar(name[i]);
 }
 _putchar(10);
+
 return (0);
 }
