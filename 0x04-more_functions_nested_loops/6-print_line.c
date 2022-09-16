@@ -9,10 +9,18 @@
 
 void print_lines(int n)
 {
-int z;
-for (z = '0'; z < 'n'; z++)
+int co;
+
+if (n <= 0)
 {
-_putchar('_');
+_putchar('\n');
+}
+else
+{
+for (co = 1; co <= n; co++)
+{
+putchar('_');
 }
 _putchar('\n');
+}
 }
