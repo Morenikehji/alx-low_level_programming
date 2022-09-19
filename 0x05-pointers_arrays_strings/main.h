@@ -15,5 +15,5 @@ int _putchar(char);
 
  void puts_half(char *str);
  void print_array(int *a, int n);
- char * strcdv(char *dest char *src):
+ void *_strpcy((char *dest, *src):
  int _atoi(char *s);
