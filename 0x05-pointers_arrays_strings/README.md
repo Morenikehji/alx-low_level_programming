@@ -1,1 +1,1 @@
-This project is to create a function for pointers arrays and strings
+Learning pointers, arrays and pointers in C programming
