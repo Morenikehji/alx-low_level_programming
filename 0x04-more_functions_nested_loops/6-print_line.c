@@ -1,26 +1,16 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_lines - print straight line n times
- * @n: character value to be executed
- * Return: void
+ * print_line - prints a "_" character by a multiple of the input
+ * @n: number of lines to be printed
+ * Return: none
  */
-
-void print_lines(int n)
+void print_line(int n)
 {
-int co;
-
-if (n <= 0)
+if (n > 0)
 {
-_putchar('\n');
-}
-else
-{
-for (co = 1; co <= n; co++)
-{
-putchar('_');
+while (n--)
+_putchar('_');
 }
 _putchar('\n');
-}
 }
