@@ -1,24 +1,19 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
- *main - prints _putchar
- *
- *Return: always 0 (Success)
+ * main - prints out a string
+ * Return: returns 0 after completion
  */
-
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
-
+int i = 0;
+char letter[9] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
+while (i < 9)
+{
+char d = letter[i];
+_putchar(d);
+i++;
+}
 return (0);
-
 }
