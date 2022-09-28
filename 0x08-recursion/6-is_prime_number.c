@@ -33,6 +33,7 @@ int check_palindrome(char *s)
 	}
 	else
 	{
+		
 		return (0);
 	}
 
