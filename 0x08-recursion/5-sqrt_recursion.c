@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 int _sqrt(int n, int i);
@@ -33,3 +33,4 @@ int _sqrt(int n, int i)
 
 	return (_sqrt(n, i + 1));
 }
+
