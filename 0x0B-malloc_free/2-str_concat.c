@@ -1,52 +1,53 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
-  * alloc_grid - ...
-  * @width: ...
-  * @height: ...
+  * str_concat - Concatenates two strings of any size
+  * @s1: the first string to concatenate
+  * @s2: the second string to concatenate
   *
-  * Return: ...
+  * Return: the two strings concatenated
   */
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-int i, j, k, l;
-int **a;
+	int i = 0, j = 0, k = 0, l = 0;
+	char *s;
 
-if (width <= 0 || height <= 0)
-return (NULL);
+	if (s1 == NULL)
+		s1 = "";
 
-a = malloc(sizeof(int *) * height);
+	if (s2 == NULL)
+		s2 = "";
 
-if (a == NULL)
-{
-free(a);
-return (NULL);
-}
+	while (s1[i])
+		i++;
 
-for (i = 0; i < height; i++)
-{
-a[i] = malloc(sizeof(int) * width);
+	while (s2[j])
+		j++;
 
-if (a[i] == NULL)
-{
-for (j = i; j >= 0; j--)
-{
-free(a[j]);
-}
+	l = i + j;
+	s = malloc((sizeof(char) * l) + 1);
 
-free(a);
-return (NULL);
-}
-}
+	if (s == NULL)
+		return (NULL);
 
-for (k = 0; k < height; k++)
-{
-for (l = 0; l < width; l++)
-{
-a[k][l] = 0;
-}
-}
+	j = 0;
 
-return (a);
+	while (k < l)
+	{
+		if (k <= i)
+			s[k] = s1[k];
+
+		if (k >= i)
+		{
+			s[k] = s2[j];
+			j++;
+		}
+
+		k++;
+	}
+
+	s[k] = '\0';
+	return (s);
 }
