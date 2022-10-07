@@ -2,73 +2,77 @@
 
 #include <stdlib.h>
 
-#include <stdio.h>
-
 /**
-  * _realloc - ...
-  * @ptr: ...
-  * @old_size: ...
-  * @new_size: ...
+  * string_nconcat - ...
+  * @s1: ...
+  * @s2: ...
+  * @n: ...
   *
   * Return: ...
   */
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 {
 
-	char *nptr;	unsigned int i;
+	unsigned int i = 0, j = 0, k = 0, l = 0;	char *str;
 
-	if (new_size == old_size)
+	if (s1 == NULL)
 
-		return (ptr);
+		s1 = "";
 
-	if (ptr == NULL)
+	if (s2 == NULL)
 
-	{
+		s2 = "";
 
-		nptr = malloc(new_size);
+	while (s1[i])
 
-		if (nptr == NULL)
+		i++;
 
-			return (NULL);
+	while (s2[k])
 
-		return (nptr);
+		k++;
 
-	}
+	if (n >= k)
+
+		l = i + k;
 
 	else
 
-	{
+		l = i + n;
 
-		if (new_size == 0)
+	str = malloc(sizeof(char) * l + 1);
 
-		{
-
-			free(ptr);
-
-			return (NULL);
-
-		}
-
-	}
-
-	nptr = malloc(new_size);
-
-	if (nptr == NULL)
+	if (str == NULL)
 
 		return (NULL);
 
-	for (i = 0; i < old_size && i < new_size; i++)
+	k = 0;
+
+	while (j < l)
 
 	{
 
-		nptr[i] = ((char *) ptr)[i];
+		if (j <= i)
+
+			str[j] = s1[j];
+
+		if (j >= i)
+
+		{
+
+			str[j] = s2[k];
+
+			k++;
+
+		}
+
+		j++;
 
 	}
 
-	free(ptr);
+	str[j] = '\0';
 
-	return (nptr);
+	return (str);
 
 }
