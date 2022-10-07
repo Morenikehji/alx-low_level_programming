@@ -2,21 +2,21 @@
 
 #include <stdlib.h>
 
-/**
-  
-  * string_nconcat - ...
-  
-  * @s1: ...
-  
-   * @s2: ...
+#include <stdio.h>
 
-* @n: ...
+/**
+
+* _realloc - ...
+
+* @ptr: ...
+
+* @old_size: ...
+
+* @new_size: ...
 
 *
 
 * Return: ...
-
-*/
 
  */
 
